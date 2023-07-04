@@ -70,6 +70,7 @@ public class TC02_CreateNewUser extends TestBase{
                 .assertThat()
                 .statusCode(201)
                 .body("name",equalTo("Shady"))
+                //.body(new String(Files.readAllBytes(Paths.get(path)));)
                 .header("Content-Type","Application/Json")
                 .extract().response();
         Assert.assertTrue(PageBase.checkResponseStatusCode(res,201));
